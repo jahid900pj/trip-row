@@ -1,28 +1,64 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
+import './Header.css'
+import Button from 'react-bootstrap/esm/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { FaUser } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const { logout, user } = useContext(AuthContext)
+
+    const handleSignOut = () => {
+        logout()
+            .then(() => {
+
+            })
+            .catch(() => {
+
+            })
+    }
     return (
-        <Navbar className='shadow-lg p-3 mb-5' collapseOnSelect expand="lg" bg="light" variant="light">
+
+
+        <Navbar className='shadow-lg p-3 mb-5 bg-body' collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
-                <Navbar.Brand href="#home">Trip Row</Navbar.Brand>
+                <Navbar.Brand className=' fw-bolder' href="#home">
+                    Trip row
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto h-link">
                         <Link to='/'>Home</Link>
-                        <Link to='/services'>Tour packages</Link>
+                        <Link to='/services'>All Trips</Link>
+                        <Link to='/service/:id'>FAQ</Link>
+                        <Link to='/blog'>Blog</Link>
 
                     </Nav>
-                    <Nav>
-                        <Nav.Link href="#deets">Login</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            User
-                        </Nav.Link>
+
+                    <Nav className='h-link me-4'>
+                        {
+                            user?.uid ? <>
+
+
+                                <Button variant="outline-primary" onClick={handleSignOut}>Logout</Button>
+                            </> :
+                                <>
+                                    <Link to='/login'>Login</Link>
+                                    <Link to='/register'>Register</Link>
+                                </>
+                        }
                     </Nav>
+
+                    {
+                        user && <Nav className='h-link'>
+                            {
+                                user?.photoURL ? <img style={{ height: '40px', borderRadius: '100%', width: '40px' }} src={user?.photoURL} alt='' title={user.displayName} /> : <FaUser></FaUser>
+                            }
+                        </Nav>
+                    }
                 </Navbar.Collapse>
             </Container>
         </Navbar>
