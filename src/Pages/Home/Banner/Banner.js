@@ -3,7 +3,7 @@ import './Banner.css'
 
 function Banner() {
     return (
-        <div className=' container-fluid'>
+        <div className=' container-fluid mb-5'>
             <Carousel variant="light">
                 <Carousel.Item>
                     <div className='banner-img'>
