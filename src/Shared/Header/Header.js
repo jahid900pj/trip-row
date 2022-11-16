@@ -25,7 +25,7 @@ const Header = () => {
 
         <Navbar className='shadow-lg p-3 mb-5 bg-body' collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
-                <Navbar.Brand className=' fw-bolder' href="#home">
+                <Navbar.Brand className=' fw-bolder text-success' href="#home">
                     Trip row
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -43,7 +43,7 @@ const Header = () => {
                             user?.uid ? <>
 
 
-                                <Button variant="outline-primary" onClick={handleSignOut}>Logout</Button>
+                                <Button variant="outline-success" onClick={handleSignOut}>Logout</Button>
                             </> :
                                 <>
                                     <Link to='/login'>Login</Link>
