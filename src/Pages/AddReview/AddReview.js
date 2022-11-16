@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -9,17 +9,21 @@ import ReviewDetails from '../ReviewDetils/ReviewDetails'
 
 const AddReview = ({ data }) => {
     const [reviews, setReviews] = useState([])
+    const [refresh, setRefresh] = useState(false)
     const { description, img, price, title, _id } = data;
     const { user } = useContext(AuthContext)
     const { displayName, email, photoURL } = user || {}
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviews?serviceId=${_id}`)
+            .then(res => res.json())
+            .then(data => {
+                setReviews(data)
+                setRefresh(!refresh)
+            })
+    }, [_id, refresh])
 
 
-    fetch(`http://localhost:5000/reviews?serviceId=${_id}`)
-        .then(res => res.json())
-        .then(data => {
-            setReviews(data)
-        })
     // console.log(review)
 
     const handleReview = (e) => {
@@ -66,6 +70,7 @@ const AddReview = ({ data }) => {
                                         placeholder="Recipient's username"
                                         aria-label="Recipient's username"
                                         aria-describedby="basic-addon2"
+                                        required
                                     />
                                     <Button type='submit' variant="outline-success" id="button-addon2">
                                         Add Review
@@ -80,7 +85,8 @@ const AddReview = ({ data }) => {
             <div>
                 <Card className='w-100' style={{ maxWidth: '25rem' }}>
                     {
-                        reviews.map(review => <ReviewDetails></ReviewDetails>)
+                        reviews.map(review => <ReviewDetails key={review._id}
+                            review={review}></ReviewDetails>)
                     }
                 </Card>
             </div>

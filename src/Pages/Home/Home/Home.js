@@ -8,7 +8,9 @@ import Button from 'react-bootstrap/esm/Button';
 const Home = () => {
     const [homeServices, setHomeServices] = useState([])
     // console.log(homeServices)
+    fetch(() => {
 
+    }, [])
     fetch('http://localhost:5000/homeServices')
         .then(res => res.json())
         .then(data => setHomeServices(data))

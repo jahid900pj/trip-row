@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/esm/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
+import SocialAccount from '../../SocialAccount/SocialAccount';
 
 const Login = () => {
     const { login } = useContext(AuthContext)
@@ -100,9 +101,9 @@ const Login = () => {
                         Login
                     </Button>
                     <p className='text-center hr-line'> <span>Login with social accounts</span> </p>
-                    {/* <SocialAccounts></SocialAccounts> */}
+                    <SocialAccount></SocialAccount>
                     <p className='text-center'>Don't have an account?
-                        <Link to='/signup'> Sign up</Link>
+                        <Link to='/register'> Sign up</Link>
                     </p>
 
                 </Form>
