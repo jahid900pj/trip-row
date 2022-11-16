@@ -34,6 +34,7 @@ const Header = () => {
                         <Link to='/'>Home</Link>
                         <Link to='/services'>All Trips</Link>
                         <Link to='/MyReviews'>My Reviews</Link>
+                        <Link to='/addService'>Add Service</Link>
                         <Link to='/blog'>Blog</Link>
 
                     </Nav>
