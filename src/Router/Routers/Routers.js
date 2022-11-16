@@ -3,8 +3,10 @@ import Main from "../../Layout/Main";
 import Login from "../../Pages/Form/Login/Login";
 import Register from "../../Pages/Form/Register/Register";
 import Home from "../../Pages/Home/Home/Home";
+import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceDetail from "../../Pages/ServiceDetails/ServiceDetail";
 import Services from "../../Pages/Services/Services";
+import PrivateRoute from "../PrivateRouter/PrivateRouter";
 
 
 const router = createBrowserRouter([
@@ -28,6 +30,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/register', element: <Register></Register>
+            },
+            {
+                path: '/MyReviews', element: <PrivateRoute> <MyReviews></MyReviews></PrivateRoute>
             }
 
         ]

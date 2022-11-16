@@ -33,7 +33,7 @@ const Header = () => {
                     <Nav className="me-auto h-link">
                         <Link to='/'>Home</Link>
                         <Link to='/services'>All Trips</Link>
-                        <Link to='/service/:id'>FAQ</Link>
+                        <Link to='/MyReviews'>My Reviews</Link>
                         <Link to='/blog'>Blog</Link>
 
                     </Nav>

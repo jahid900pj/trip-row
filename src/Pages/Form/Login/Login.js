@@ -1,12 +1,17 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/esm/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import SocialAccount from '../../SocialAccount/SocialAccount';
 
 const Login = () => {
     const { login } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    const from = location.state?.from?.pathname || '/'
+
 
     const [userInfo, setUserInfo] = useState({
         email: "", password: ""
@@ -25,7 +30,7 @@ const Login = () => {
                 console.log(user)
                 form.reset()
                 setError("")
-                // navigate(location?.state?.from?.pathname)
+                navigate(location?.state?.from?.pathname)
             })
             .catch(error => {
                 console.log(error)

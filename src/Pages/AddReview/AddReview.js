@@ -15,7 +15,7 @@ const AddReview = ({ data }) => {
     const { displayName, email, photoURL } = user || {}
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?serviceId=${_id}`)
+        fetch(`http://localhost:5000/addReviews?serviceId=${_id}`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data)
@@ -32,7 +32,7 @@ const AddReview = ({ data }) => {
         const massage = form.massage.value;
         const review = {
             serviceId: _id,
-            massage, displayName, email, photoURL
+            massage, displayName, email, photoURL, price, title
 
         }
 
