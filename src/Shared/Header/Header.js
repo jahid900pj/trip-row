@@ -35,7 +35,7 @@ const Header = () => {
                         <Link to='/services'>All Trips</Link>
                         <Link to='/MyReviews'>My Reviews</Link>
                         <Link to='/addService'>Add Service</Link>
-                        <Link to='/blog'>Blog</Link>
+                        <Link to='/blogs'>Blog</Link>
 
                     </Nav>
 

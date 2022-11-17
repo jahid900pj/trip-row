@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            <footer className='bg-success p-5 mt-5'>
+        <div className=' mt-5 align-self-end'>
+            <footer className='bg-success p-5'>
                 <div className="container">
-                    <div className="row">
+                    <div className="row ">
                         <div className="col-md-4 footer-column">
                             <ul className="nav flex-column">
                                 <li className="nav-item">

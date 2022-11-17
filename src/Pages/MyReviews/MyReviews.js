@@ -18,12 +18,12 @@ const MyReviews = () => {
     }, [user?.email, refresh])
 
     return (
-        <div className='container'>
+        <div style={{ marginBottom: '300px' }} className='container '>
             {
                 myReviews.length === 0 ? <>
-                    <h1>No reviews</h1>
+                    <h1 className='mb-5'>No reviews</h1>
                 </> :
-                    <Table striped bordered hover>
+                    <Table striped bordered hover className='mb-5'>
                         <thead>
                             <tr>
                                 <th>#</th>

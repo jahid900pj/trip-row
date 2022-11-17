@@ -39,7 +39,7 @@ const AddService = () => {
 
 
     return (
-        <div className='container'>
+        <div style={{ marginBottom: '200px' }} className='container'>
             <Form onSubmit={handleAddService}>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
