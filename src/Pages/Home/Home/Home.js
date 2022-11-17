@@ -12,7 +12,7 @@ const Home = () => {
     fetch(() => {
 
     }, [])
-    fetch('http://localhost:5000/homeServices')
+    fetch('https://server-side-assigment-11.vercel.app/homeServices')
         .then(res => res.json())
         .then(data => setHomeServices(data))
     return (

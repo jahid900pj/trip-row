@@ -15,7 +15,7 @@ const AddReview = ({ data }) => {
     const { displayName, email, photoURL } = user || {}
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addReviews?serviceId=${_id}`)
+        fetch(`https://server-side-assigment-11.vercel.app/addReviews?serviceId=${_id}`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data)
@@ -36,7 +36,7 @@ const AddReview = ({ data }) => {
 
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://server-side-assigment-11.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
