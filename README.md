@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-# Royalwatch
+# Trip row
 ## Trip row  website link (https://assigment-11-bc7ca.web.app/)
 ## Trip row  server link (https://server-side-assigment-11.vercel.app/)
 ## Trip row server code link (https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-jahid900pj)
