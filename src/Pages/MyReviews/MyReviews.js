@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import Table from 'react-bootstrap/Table';
+import { toast } from 'react-toastify';
 
 const MyReviews = () => {
     const [myReviews, setMyReviews] = useState([])
@@ -65,6 +66,7 @@ const MyReview = ({ review, refresh, setRefresh }) => {
                     console.log(data)
                     if (data.deletedCount > 0) {
                         setRefresh(!refresh)
+                        toast.success('Deleted successfully')
                     }
 
                 })

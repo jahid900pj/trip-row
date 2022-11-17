@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import { toast } from 'react-toastify';
 
 const AddService = () => {
 
@@ -30,7 +31,8 @@ const AddService = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Order place successfully')
+                    // alert('Order place successfully')
+                    toast.success('Order place successfully')
                     form.reset()
                 }
             })
