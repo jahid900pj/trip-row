@@ -24,7 +24,7 @@ function Banner() {
                         <img
                             className="d-block w-100"
                             style={{ minHeight: '230px', maxHeight: '650px' }}
-                            src="https://www.goarif.com/wp-content/uploads/2021/06/Guliakhali-Sea-Beach-GoArif-scaled-1920x832.jpg "
+                            src="https://i.ibb.co/8K07Mr0/Kashmir-4-999x800.jpg"
                             alt="Second slide"
                         />
                     </div>
@@ -38,7 +38,7 @@ function Banner() {
                         <img
                             className="d-block w-100"
                             style={{ minHeight: '230px', maxHeight: '650px' }}
-                            src="https://www.goarif.com/wp-content/uploads/2021/06/Kuakata-Sea-Beach-GoArif-20-1920x1440.jpg.webp"
+                            src="https://i.ibb.co/9TG74QW/cox.jpg"
                             alt="Third slide"
                         />
                     </div>
