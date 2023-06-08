@@ -10,7 +10,7 @@ function Banner() {
                         <img
                             className="d-block w-100 "
                             style={{ minHeight: '230px', maxHeight: '650px' }}
-                            src="https://www.goarif.com/wp-content/uploads/2019/05/sajek-v-GoArif.jpg"
+                            src="https://i.ibb.co/VMLTyFK/sylhet-sidebar.jpg"
                             alt="First slide"
                         />
                     </div>

@@ -5,6 +5,10 @@ import HomeServices from '../HomeServices/HomeServices';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/esm/Button';
 import Section from '../Section/Section';
+import Blogs from '../Blogs/Blogs';
+
+// https://codepen.io/pbruny/pen/XWXObeM
+
 
 const Home = () => {
     const [homeServices, setHomeServices] = useState([])
@@ -16,19 +20,23 @@ const Home = () => {
         .then(res => res.json())
         .then(data => setHomeServices(data))
     return (
-        <div>
+        <div className=''>
             <Banner></Banner>
-            <div className='container mt-5 mb-5'>
-                <Row xs={1} md={2} lg={3} className="g-4">
-                    {
-                        homeServices.map(service => <HomeServices key={service._id} service={service}></HomeServices>)
-                    }
-                </Row>
-                <Button className='d-flex mx-auto btn btn-success'>
-                    <Link style={{ textDecoration: 'none', color: 'white' }} to='/services'>See more tour packages</Link>
-                </Button>
+            <div className='container'>
+                <div className='container mt-5 mb-5'>
+                    <Row xs={1} md={2} lg={3} className="g-4">
+                        {
+                            homeServices.map(service => <HomeServices key={service._id} service={service}></HomeServices>)
+                        }
+                    </Row>
+                    <Button className='d-flex mx-auto btn btn-success'>
+                        <Link style={{ textDecoration: 'none', color: 'white' }} to='/services'>See more tour packages</Link>
+                    </Button>
+                </div>
+
+                <Section></Section>
+                <Blogs></Blogs>
             </div>
-            <Section></Section>
 
         </div>
     );
