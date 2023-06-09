@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/esm/Button';
 import Section from '../Section/Section';
 import Blogs from '../Blogs/Blogs';
 import Testimonial from '../Testimonia/Testimonial';
+import Subscribe from '../Subscribe/Subscribe';
 
 // https://codepen.io/pbruny/pen/XWXObeM
 
@@ -38,8 +39,9 @@ const Home = () => {
                 <Section></Section>
                 <Blogs></Blogs>
                 <Testimonial></Testimonial>
-            </div>
 
+            </div>
+            <Subscribe></Subscribe>
         </div>
     );
 };
