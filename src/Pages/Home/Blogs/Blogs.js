@@ -1,6 +1,10 @@
 import React from 'react';
 
 const Blogs = () => {
+
+    const style1 = {
+        enableBackground: 'new 0 0 100 100',
+    };
     return (
         <div className='container '>
             <div>
@@ -34,9 +38,8 @@ const Blogs = () => {
                     </div>
                 </div>
 
-
-
             </section>
+
         </div>
     );
 };

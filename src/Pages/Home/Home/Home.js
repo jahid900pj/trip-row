@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/esm/Button';
 import Section from '../Section/Section';
 import Blogs from '../Blogs/Blogs';
+import Testimonial from '../Testimonia/Testimonial';
 
 // https://codepen.io/pbruny/pen/XWXObeM
 
@@ -36,6 +37,7 @@ const Home = () => {
 
                 <Section></Section>
                 <Blogs></Blogs>
+                <Testimonial></Testimonial>
             </div>
 
         </div>
