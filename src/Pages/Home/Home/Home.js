@@ -8,6 +8,7 @@ import Section from '../Section/Section';
 import Blogs from '../Blogs/Blogs';
 import Testimonial from '../Testimonia/Testimonial';
 import Subscribe from '../Subscribe/Subscribe';
+import Gallery from '../Gallery/Gallery';
 
 // https://codepen.io/pbruny/pen/XWXObeM
 
@@ -39,7 +40,7 @@ const Home = () => {
                 <Section></Section>
                 <Blogs></Blogs>
                 <Testimonial></Testimonial>
-
+                <Gallery></Gallery>
             </div>
             <Subscribe></Subscribe>
         </div>

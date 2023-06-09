@@ -1,6 +1,8 @@
 import React from 'react';
 import './Subscribe.css'
 
+// https://codepen.io/baahubali92/pen/ZwPwRY
+
 const Subscribe = () => {
     return (
         <div class="newsletter">
