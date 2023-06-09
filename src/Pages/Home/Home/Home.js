@@ -9,6 +9,8 @@ import Blogs from '../Blogs/Blogs';
 import Testimonial from '../Testimonia/Testimonial';
 import Subscribe from '../Subscribe/Subscribe';
 import Gallery from '../Gallery/Gallery';
+import ServiceProvide from '../ServiceProvide/ServiceProvide';
+import ContactUs from '../ContactUs/ContactUs';
 
 // https://codepen.io/pbruny/pen/XWXObeM
 
@@ -36,11 +38,14 @@ const Home = () => {
                         <Link style={{ textDecoration: 'none', color: 'white' }} to='/services'>See more tour packages</Link>
                     </Button>
                 </div>
+                <ServiceProvide></ServiceProvide>
 
+                <Gallery></Gallery>
+                <Testimonial></Testimonial>
                 <Section></Section>
                 <Blogs></Blogs>
-                <Testimonial></Testimonial>
-                <Gallery></Gallery>
+                <ContactUs></ContactUs>
+
             </div>
             <Subscribe></Subscribe>
         </div>
